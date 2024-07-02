@@ -153,5 +153,45 @@ export default {
   padding-bottom: 65px;
 }
 
+@media (max-width: 480px) {
+  .about-section h2, .about-section h3 {
+    font-size: 40px;
+  }
 
+  .about-section p {
+    font-size: 16px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .fun-facts {
+    font-size: 20px;
+  }
+
+  .fact-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section h2, .about-section h3 {
+    font-size: 50px;
+  }
+
+  .about-section p {
+    font-size: 18px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+
+  .fun-facts {
+    font-size: 25px;
+  }
+
+  .fact-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
 </style>
