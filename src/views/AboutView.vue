@@ -1,6 +1,6 @@
 <template>
   <NavBarComp/>
-  <div class="about-page">
+  <div class="about-page" data-aos="fade-up" data-aos-duration="1000">
     <div class="blur-overlay"></div>
     <div class="about-section">
       <h2>About Me</h2>
@@ -10,7 +10,7 @@
         <p>{{ about }}</p>
         <p>{{ bio }}</p>
         <h3>Fun Facts</h3>
-        <ul class="fun-facts" data-aos="fade-up" data-aos-duration="1000">
+        <ul class="fun-facts">
           <li v-for="(fact, index) in funFacts" :key="index">
             <img :src="fact.icon" alt="Icon" class="fact-icon" :style="{ width: '80px', height: '80px' }">
             {{ fact.fact }}
