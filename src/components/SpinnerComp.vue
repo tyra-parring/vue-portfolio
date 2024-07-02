@@ -1,6 +1,6 @@
 <template>
-    <div class="spinner">
-      <div class="spinner-dot" v-for="i in 3" :key="i"></div>
+    <div class="spinner-container">
+      <div class="spinner" v-for="i in 3" :key="i"></div>
     </div>
   </template>
   
@@ -12,10 +12,13 @@
   
   <style scoped>
   .spinner {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 24px;
     height: 24px;
+    margin: 0 auto;
   }
   
   .spinner-dot {
@@ -30,26 +33,10 @@
     animation: pulse 1s ease-in-out infinite;
   }
   
-  .spinner-dot:nth-child(1) {
-    animation-delay: 0s;
-  }
-  
-  .spinner-dot:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-  
-  .spinner-dot:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* or any other height you want */
+}
   </style>
