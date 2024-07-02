@@ -1,6 +1,5 @@
 <template lang="">
   <div class="home-page">
-  <!-- <NavBarComp/> -->
       <div class="hero-section">
         <h1>Welcome to My Portfolio!</h1>
           <p ref="typingText"></p>
@@ -36,37 +35,52 @@
       </ul>
       </div>
       </div>
-  <!-- <FooterComp/> -->
-        
 </template>
 
 <script>
   import AOS from 'aos';
   import 'aos/dist/aos.css';
 
-export default {
-    components: {
-      
+  export default {
+    data() {
+      return {
+        about: ''
+      };
     },
     mounted() {
-    const text = "Hi there! I’m Tyra Parring, an aspiring web developer dedicated to creating intuitive and visually appealing user experiences. Browse through my work to see how I blend design and technology to craft engaging digital solutions!";
-    const typingText = this.$refs.typingText;
-    let charIndex = 0;
-    function type() {
-      if (charIndex < text.length) {
-        typingText.textContent += text[charIndex];
-        charIndex++;
-        setTimeout(type, 60);
+      this.fetchAboutData();
+
+      const text = "Hi there! I’m Tyra Parring, an aspiring web developer dedicated to creating intuitive and visually appealing user experiences. Browse through my work to see how I blend design and technology to craft engaging digital solutions!";
+      const typingText = this.$refs.typingText;
+      let charIndex = 0;
+      function type() {
+        if (charIndex < text.length) {
+          typingText.textContent += text[charIndex];
+          charIndex++;
+          setTimeout(type, 60);
+        }
+      }
+      type();
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    },
+    methods: {
+      fetchAboutData() {
+        fetch('https://tyra-parring.github.io/first_api/data/data.json')
+          .then(response => response.json())
+          .then(data => {
+            this.about = data.about;
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
       }
     }
-    type();
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  },
-}
+  };
 </script>
+
 <style scoped>
 body{
   display: block;
