@@ -52,6 +52,7 @@ export default {
   color: white;
   padding: 20px;
   text-align: center;
+  z-index: 1;
 }
 
 .footer-container {
@@ -62,6 +63,7 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .social-media-icons {
