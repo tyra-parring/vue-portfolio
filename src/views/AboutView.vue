@@ -2,13 +2,13 @@
   <NavBarComp/>
   <div class="about-page">
     <div class="blur-overlay"></div>
-    <div class="about-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="about-section">
       <h2>About Me</h2>
       <SpinnerComp v-if="loading" />
       <div v-else>
-        <img src="https://tyra-parring.github.io/host-/image/InShot_20240424_205858533.jpg" alt="Tyra Parring" width="300" height="" class="profilepic">
-        <p>{{ about }}</p>
-        <p>{{ bio }}</p>
+        <img src="https://tyra-parring.github.io/host-/image/InShot_20240424_205858533.jpg" alt="Tyra Parring" width="300" height="" class="profilepic" data-aos="fade-up" data-aos-duration="1000">
+        <p data-aos="fade-up" data-aos-duration="1000">{{ about }}</p>
+        <p data-aos="fade-up" data-aos-duration="1000">{{ bio }}</p>
         <h3>Fun Facts</h3>
         <ul class="fun-facts" data-aos="fade-up" data-aos-duration="1000">
           <li v-for="(fact, index) in funFacts" :key="index">
