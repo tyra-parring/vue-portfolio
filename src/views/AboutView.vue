@@ -2,7 +2,7 @@
   <NavBarComp/>
   <div class="about-page">
     <div class="blur-overlay"></div>
-    <div class="about-section">
+    <div class="about-section" data-aos="fade-up" data-aos-duration="1000">
       <h2>About Me</h2>
       <SpinnerComp v-if="loading" />
       <div v-else>
