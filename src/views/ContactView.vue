@@ -17,7 +17,7 @@
       <div class="container">
         <h1 class="title">Get in Touch</h1>
         <p class="subtitle">Let's chat about your next project!</p>
-        <form @submit.prevent="handleSubmit">
+        <form @submit.prevent="handleSubmit" action="https://formspree.io/f/xrgnrzgz" method="POST">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Jane Doe" v-model="name" required>
@@ -28,7 +28,7 @@
           </div>
           <div class="form-group">
             <label for="message">Message:</label>
-            <textarea id="message" placeholder="insert message here" v-model="message" required></textarea>
+            <textarea id="message" placeholder="Insert message here" v-model="message" required></textarea>
           </div>
           <button type="submit">Send Message</button>
         </form>
@@ -98,7 +98,8 @@
     background-color: rgba(0, 0, 0, 0.247);
     text-align: center;
     backdrop-filter: blur(5px);
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-bottom: 7em;
     z-index: 0;
   }
   
