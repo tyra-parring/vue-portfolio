@@ -86,6 +86,10 @@
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     animation: fade-in 3s;
+    backdrop-filter: blur(6px);
+    /* filter: blur(5px);  */
+    background: rgba(0, 0, 0, 0.129);
+    overflow: hidden;
   }
 
   @keyframes fade-in {
