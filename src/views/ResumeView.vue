@@ -4,19 +4,19 @@
         <div class="container">
           <section class="edu">
             <h1 class="resu">Resume</h1>
-            <h2>Education</h2>
+            <h2 data-aos="fade-up" data-aos-duration="1000">Education</h2>
             <div class="education-content">
               <div class="edu-item" data-aos="fade-up" data-aos-duration="1000">
-                <h3>2019 - 2022</h3>
-                <p>I completed my schooling career at Bonteheuwel High School.</p>
+                <h3 data-aos="fade-up" data-aos-duration="1000">2019 - 2022</h3>
+                <p data-aos="fade-up" data-aos-duration="1000">I completed my schooling career at Bonteheuwel High School.</p>
               </div>
               <div class="edu-item" data-aos="fade-up" data-aos-duration="1000">
-                <h3>2021</h3>
-                <p>Completed a Reading and Writing Tutoring Workshop under the Amy Biehl Foundation.</p>
+                <h3 data-aos="fade-up" data-aos-duration="1000">2021</h3>
+                <p data-aos="fade-up" data-aos-duration="1000">Completed a Reading and Writing Tutoring Workshop under the Amy Biehl Foundation.</p>
               </div>
               <div class="edu-item" data-aos="fade-up" data-aos-duration="1000">
-                <h3>2024 - 2025</h3>
-                <p>I joined a Coding Bootcamp program that provided the fundamentals of Web Development, including learning coding languages such as HTML, CSS, JavaScript, and more. The bootcamp also taught interpersonal and self-development skills to help us grow both professionally and personally.</p>
+                <h3 data-aos="fade-up" data-aos-duration="1000">2024 - 2025</h3>
+                <p data-aos="fade-up" data-aos-duration="1000">I joined a Coding Bootcamp program that provided the fundamentals of Web Development, including learning coding languages such as HTML, CSS, JavaScript, and more. The bootcamp also taught interpersonal and self-development skills to help us grow both professionally and personally.</p>
               </div>
             </div>
           </section>
@@ -26,7 +26,7 @@
             <div class="work-content">
               <div class="work-item">
                 <h3>2022 - FUTUR-ED E-LEARNING CENTRES</h3>
-                <p>Completed a job shadowing programme at a contact centre, promoting products to customers.</p>
+                <p >Completed a job shadowing programme at a contact centre, promoting products to customers.</p>
               </div>
             </div>
           </section>
