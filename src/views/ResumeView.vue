@@ -4,15 +4,15 @@
         <div class="container">
           <section class="edu">
             <h1 class="resu">Resume</h1>
-            <h2 data-aos="fade-up" data-aos-duration="1000">Education</h2>
+            <h2>Education</h2>
             <div class="education-content">
               <div class="edu-item" data-aos="fade-up" data-aos-duration="1000">
-                <h3 data-aos="fade-up" data-aos-duration="1000">2019 - 2022</h3>
-                <p data-aos="fade-up" data-aos-duration="1000">I completed my schooling career at Bonteheuwel High School.</p>
+                <h3>2019 - 2022 - Bonteheuwel High School</h3>
+                <p>I completed my schooling career at Bonteheuwel High School.</p>
               </div>
               <div class="edu-item" data-aos="fade-up" data-aos-duration="1000">
-                <h3 data-aos="fade-up" data-aos-duration="1000">2021</h3>
-                <p data-aos="fade-up" data-aos-duration="1000">Completed a Reading and Writing Tutoring Workshop under the Amy Biehl Foundation.</p>
+                <h3>2021 - Tutoring Workshop</h3>
+                <p>Completed a Reading and Writing Tutoring Workshop under the Amy Biehl Foundation.</p>
               </div>
               <div class="edu-item" data-aos="fade-up" data-aos-duration="1000">
                 <h3 data-aos="fade-up" data-aos-duration="1000">2024 - 2025</h3>
@@ -36,7 +36,7 @@
             <div class="work-content">
               <div class="work-item">
                 <h3>2022 - FUTUR-ED E-LEARNING CENTRES</h3>
-                <p >Completed a job shadowing programme at a contact centre, promoting products to customers.</p>
+                <p>Completed a job shadowing programme at a contact centre, promoting products to customers.</p>
               </div>
             </div>
           </section>
