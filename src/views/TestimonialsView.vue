@@ -48,17 +48,16 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .section-heading {
     display: flex;
     justify-content: center;
     font-size: 65px;
     font-weight: 549px;
-    margin: 1;
+    margin: 0;
     z-index: 2;
     position: relative;
-    margin-top: 1;
+    margin-top: 1rem; 
     animation: fade-in 3s;
 }
 
@@ -74,9 +73,10 @@ export default {
 .testimonial-section {
     background: url('https://tyra-parring.github.io/host-/image/flat-lay-monstera-other-leaves.jpg');
     background-size: cover;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     min-height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .testimonial-section::before {
@@ -85,13 +85,11 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    height: 1531px;
+    height: 100%; 
     z-index: 1;
-    /* position: relative; */
     background-color: rgba(0, 0, 0, 0.238);
-    backdrop-filter: blur(6px); 
+    backdrop-filter: blur(6px);
 }
-
 
 .testimonial-cards {
   display: flex;
@@ -143,10 +141,123 @@ export default {
   color: #333;
 }
 
-/* @media (max-width: 768px) {
-  .card {
-    flex: 1 1 calc(100% - 40px);
-    max-width: calc(100% - 40px);
+@media (max-width: 300px) {
+  .section-heading {
+    font-size: 24px;
+    margin-top: 10px;
   }
-} */
+
+  .testimonial-cards {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 5px;
+  }
+
+  .testimonial-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-text {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 500px) {
+  .section-heading {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .testimonial-image {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 12px;
+  }
+
+  .testimonial-text {
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+  .section-heading {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .testimonial-cards {
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+    padding: 20px;
+    margin: 15px;
+  }
+
+  .testimonial-image {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-text {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 701px) {
+  .section-heading {
+    font-size: 50px;
+    margin-top: 25px;
+  }
+
+  .testimonial-cards {
+    flex-direction: row;
+    gap: 25px;
+    padding: 25px;
+  }
+
+  .card {
+    flex: 1 1 calc(33% - 40px);
+    max-width: calc(33% - 40px);
+    padding: 25px;
+    margin: 20px;
+  }
+
+  .testimonial-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 1em;
+  }
+}
 </style>
