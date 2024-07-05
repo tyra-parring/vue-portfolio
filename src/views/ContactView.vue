@@ -77,7 +77,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .contact-page {
     background: url('https://tyra-parring.github.io/host-/image/4884233-hd_1920_1080_30fps-ezgif.com-optimize.gif');
     display: flex;
@@ -101,6 +101,7 @@
     /* margin-top: 20px; */
     margin-bottom: 7em;
     z-index: 0;
+    animation: fade-in 3s
   }
   
   .title {
@@ -109,6 +110,7 @@
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    animation: fade-in 3s
   }
   
   .subtitle {
@@ -118,6 +120,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    animation: fade-in 3s
   }
   
   .form-group {
@@ -172,11 +175,13 @@
   width: 90px;
   height: 90px;
   margin-bottom: 10px;
+  animation: fade-in 3s
 }
 
 .info-item p {
   font-size: 16px;
   margin-bottom: 0;
+  animation: fade-in 3s
 }
 
 .contact-info {
@@ -184,7 +189,7 @@
   justify-content: space-around; 
   margin-bottom: 20px;
   width: 100%;
-  max-width: 900px; /* Ensure it matches .container width */
+  max-width: 900px;
 }
 
 .info-item {
@@ -205,5 +210,14 @@
   margin-bottom: 20px;
   margin-top: 100px;
   color: #000000; 
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
   </style>

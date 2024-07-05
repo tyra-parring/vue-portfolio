@@ -6,13 +6,13 @@
       <h2>About Me</h2>
       <SpinnerComp v-if="loading" />
       <div v-else>
-        <img src="https://tyra-parring.github.io/host-/image/InShot_20240424_205858533.jpg" alt="Tyra Parring" width="300" height="" class="profilepic" data-aos="fade-up" data-aos-duration="1000">
+        <img src="https://tyra-parring.github.io/host-/image/InShot_20240424_205858533.jpg" alt="Tyra Parring" width="300" height="" class="profilepic">
         <p data-aos="fade-up" data-aos-duration="1000">{{ about }}</p>
         <p data-aos="fade-up" data-aos-duration="1000">{{ bio }}</p>
         <h3>Fun Facts</h3>
         <ul class="fun-facts" data-aos="fade-up" data-aos-duration="1000">
           <li v-for="(fact, index) in funFacts" :key="index">
-            <img :src="fact.icon" alt="Icon" class="fact-icon" :style="{ width: '80px', height: '80px' }">
+            <img :src="fact.icon" alt="Icon" class="fact-icon" :style="{ width: '80px', height: '80px' }" data-aos="fade-up" data-aos-duration="1000">
             {{ fact.fact }}
           </li>
         </ul>
