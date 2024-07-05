@@ -1,11 +1,11 @@
 <template>
   <div class="testimonial-section">
     <h2 class="section-heading">Testimonials</h2>
-    <div class="testimonial-cards">
+    <div class="testimonial-cards" data-aos="fade-up" data-aos-duration="1000">
       <div class="card" v-for="(testimonial, index) in testimonials" :key="index">
-        <div class="card-content">
+        <div class="card-content" data-aos="fade-up" data-aos-duration="1000">
           <img v-if="testimonial.image" :src="testimonial.image" alt="Testimonial Image" class="testimonial-image" />
-          <div class="testimonial-text">
+          <div class="testimonial-text" data-aos="fade-up" data-aos-duration="1000">
             <p> {{ testimonial.message }} </p>
             <p class="testimonial-name"> {{ testimonial.name }} </p>
           </div>
@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default {
   data() {
     return {
@@ -25,6 +28,7 @@ export default {
   },
   mounted() {
     this.fetchTestimonials();
+    AOS.init();
   },
   methods: {
     async fetchTestimonials() {
@@ -51,14 +55,42 @@ export default {
     justify-content: center;
     font-size: 65px;
     font-weight: 549px;
+    margin: 1;
+    z-index: 2;
+    position: relative;
+    margin-top: 1;
+    animation: fade-in 3s;
 }
 
-/* .testimonial-section {
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.testimonial-section {
     background: url('https://tyra-parring.github.io/host-/image/flat-lay-monstera-other-leaves.jpg');
-    height: 100vh;
     background-size: cover;
-    background-repeat: no-repeat;
-} */
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.testimonial-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1531px;
+    z-index: 1;
+    /* position: relative; */
+    background-color: rgba(0, 0, 0, 0.238);
+    backdrop-filter: blur(6px); 
+}
 
 
 .testimonial-cards {
@@ -67,6 +99,8 @@ export default {
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .card {
@@ -81,6 +115,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
 .card-content {
