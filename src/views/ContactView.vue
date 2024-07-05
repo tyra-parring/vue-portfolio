@@ -63,19 +63,40 @@
       once: true,
     });
   },
-    methods: {
-      handleSubmit() {
-        this.loading = true
-        // Add your email sending logic here
-        // For example, you can use EmailJS or a backend API to send the email
-        setTimeout(() => {
-          this.loading = false
-          this.success = true
-        }, 2000)
+  methods: {
+  async handleSubmit() {
+    try {
+      this.loading = true;
+
+      const response = await fetch('https://formspree.io/f/xrgnrzgz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          message: this.message
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
+
+      this.name = '';
+      this.email = '';
+      this.message = '';
+      this.success = true;
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      this.loading = false;
     }
   }
-  </script>
+  }
+}
+</script>
   
   <style scoped>
   .contact-page {
